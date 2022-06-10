@@ -1,0 +1,168 @@
+/*
+*   Copyright (c) 2022 Janderson Weller <janderson.weller@gmail.com>
+*
+*            Arquivo de estilização dos para efeito máquina de escrever
+*
+*    Este arquivo contém a formatação dos estilos utilizados nas animações, para melhor
+*    entendimento, a maioria das sessões estão comentadas.
+*/
+
+/* Definindo o tamanho mínimo da tela para a animação ocorrer */
+
+    @media (min-width: 250px) {
+
+        /* Efeito máquina de escrever */
+            
+            /* Estilização do h1 */
+
+                .container-perfil .typeWriter {
+                    max-width: 100%;
+                    animation: whiter 6s steps(25) infinite alternate, cursor .4s infinite alternate;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    padding-right: .2rem;
+                    border-right: 2px solid;
+                }
+
+            /* Fim */
+
+
+            /* Animação do h1 */
+            
+                @keyframes whiter {
+                    from {
+                        max-width: 0;
+                    }
+                }
+
+            /* Fim */
+
+
+            /* Animação do cursor */
+
+                @keyframes cursor {
+                    40% {
+                        border-color: #000;
+                    }
+                    
+                }
+
+            /* Fim */
+
+
+        /* Fim Animação máquina de escrever */
+
+
+        /* Animação título da sessão dos cards */
+
+            /* Início da animação */
+
+                @keyframes cards {
+
+                    from {
+                        backdrop-filter: blur(.5rem); /* Efeito de vidro */
+                        border-radius: .2rem;
+                        /* margin-top: .2rem; Efeito onda */
+                        box-shadow:0 0 0.2rem 0.5rem #00bfff;
+                    }
+                    
+                }
+
+            /* Fim */
+
+        /* Fim animação dos cards */
+    }
+
+/* Fim animação media query */  
+
+
+/* Animação do perfil contido na Section Principal da tela inicial */
+
+    /* Início animação */
+
+        @keyframes show-text {
+
+            0% {
+                animation-delay: 5s;
+                opacity: 0;
+                transform: translate3D(0, 0px, -100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate3D(0px, 0px, 0px);
+                transition: 1s all ease;
+            }
+
+        }
+
+    /* Fim */
+
+/* Fim animação */
+
+
+/* Animação texto span */
+
+    /* Definindo a animação */
+
+        .dev-code {
+            border-radius: 0.2rem;
+            animation: text-alert .4s infinite alternate;
+        }
+    /* Fim */
+
+
+    /* Início da animação */
+
+        @keyframes text-alert {
+            
+            from {
+                background-color: #fdfafa;
+                border-radius: 0.2rem;
+            }
+
+        }
+    /* Fim */
+    
+/* Fim animação texto span */
+
+/* Animação Footer card */
+
+    .cards-footer a {
+        /* animation: cards 1s infinite alternate; */
+        animation: pisca-img-footer-card 1s infinite alternate;
+    }
+
+    @keyframes pisca-img-footer-card {
+        
+        from {
+            backdrop-filter: blur(.5rem); /* Efeito de vidro */
+            border: #00bfff;
+            border-radius: 1rem;
+            box-shadow:0 0 2px 2px #00bfff;
+        }
+        
+    }
+
+/* Fim */
+
+/* Animação coração */
+
+    .coracao {
+        animation: coracao 1s infinite alternate;
+    }
+
+    @keyframes coracao {
+        
+        from {
+            background-color: #00bfff;
+            /* border-radius: .1rem;
+            margin-top: .2rem; */
+            box-shadow:0 0 0.2rem 0.5rem #00bfff;
+        }
+        
+    }
+
+/* Fim */
+
+
